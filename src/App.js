@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./style.css";
 import { paragraph } from "./text";
+import { shuffle } from "./utils";
 
-const text = paragraph;
+const text = shuffle(paragraph.split(" "));
 
 export default function App() {
-  const [words, setWords] = useState(text.split(" "));
+  const [words, setWords] = useState(text);
   const [input, setInput] = useState("");
   const [currectWords, setCurrectWords] = useState([]);
   const [wrongWords, setWrongWords] = useState([]);
@@ -27,12 +28,24 @@ export default function App() {
     <div>
       <h1>Typing Speed Test</h1>
 
-      <div style={{ marginBottom: 10 }}>{words.map(w => w + " ")}</div>
-
       <div>
-        <span>Currect Words: {currectWords.length}</span>
+        <span style={{ color: "green" }}>
+          Currect Words: {currectWords.length}
+        </span>
         <br />
-        <span>Wrong Words: {wrongWords.length}</span>
+        <span style={{ color: "red" }}>Wrong Words: {wrongWords.length}</span>
+      </div>
+
+      <div
+        style={{
+          marginTop: 10,
+          marginBottom: 10,
+          height: 50,
+          overflow: "hidden",
+          fontSize: 22
+        }}
+      >
+        {words.map(w => w + " ")}
       </div>
 
       <input
