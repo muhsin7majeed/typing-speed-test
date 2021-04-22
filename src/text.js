@@ -1,0 +1,2 @@
+export const paragraph =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed bibendum felis. Donec sit amet lobortis lorem. Nam rutrum erat id purus malesuada, ac varius magna sagittis. Quisque rutrum neque eros, sed ultrices elit luctus sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque suscipit pretium lacus. Fusce semper feugiat urna, scelerisque pretium quam efficitur eget.";
